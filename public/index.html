@@ -1,43 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000000">
     <meta
       name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+      content="Web site created using create-react-app">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+    <title>MI 449: Final Project</title>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+    <header>
+      <div id="header">
+        <h1>Welcome back, Nadia!</h1>
+        <p>Here is an overview of your recent fitness trackings.</p>
+      </div>
+      <img id="profile" src="profile.png" alt="picture of user">
+    </header>
+    <main>
+      <h2>TODAY</h2>
+      <div id="today">
+        <div class="grid tracker">
+          <table id="activitytracker">
+            <tr>
+              <th>Activity</th>
+              <th>Start Time</th>
+              <th>End Time</th>
+              <th>Average Heartbeat (bpm)</th>
+              <th>Calories (kcal)</th>
+            </tr>
+          </table>
+        </div>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+        <div class="grid steps">
+          <h3>Progress Toward Step Goal</h3>
+          <img id="piechart" src="https://quickchart.io/chart/render/sf-fc07914b-768a-457d-8ae2-f03161159836" alt="Pie Chart for Steps completed">
+        </div>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+        <div class="grid distance">
+          <img id="distance" src="https://quickchart.io/chart/render/sf-a77bc17c-44b8-4a01-ab94-a4d8ca932f26" alt="Line Graph for Distance Walked">
+        </div>
+      </div>
+
+      <div id="qa">
+        <h2>COMMON QUESTIONS</h2>
+        <div id="questions">
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    How can I increase my daily step count?
+                </button>
+              </h3>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  Reaching your goal of 10,000 steps may seem difficult, however, going on a walk every day, for even just 30 minutes will do wonders. Strive to include a 30-minute walk in your daily routine.
+                </div>
+              </div>
+            </div>
+
+
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    What workouts burn the most calories?
+                </button>
+              </h3>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  Usually, high intensity training (HIT) tends to be the most efficient in burning the most calories in the least amount of time. 
+                </div>
+              </div>
+            </div>
+
+
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Should I work out every day?
+                </button>
+              </h3>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  Not necessarily. While it is important to be active for 60 minutes every day, this does not mean you need to do an actual workout. It is actually beneficial to take rest days to let your muscles recover and grow.
+                </div>
+              </div>
+            </div>
+
+
+            <div class="accordion-item">
+                <h3 class="accordion-header" id="headingFour">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    How long should my workouts be?
+                  </button>
+                </h3>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    Usually, the recommended duration of a workout is around 45 minutes to an hour.
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+      <form id="form">
+        <h2>MORE INFO</h2>
+        <div id="info">
+          <h4>Sign up for our newsletter!</h4>
+          <div id="register">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="submit" value="Register">
+          </div>
+        </div>
+      </form>
+    </main>
+    <script>
+      var form = document.getElementById('form')
+  
+      form.addEventListener('submit', function(event){event.preventDefault() //prevents the form from autosubmitting
+        var username = document.getElementById('username').value
+  
+        console.log(username)
+  
+        var email = document.getElementById('email').value
+  
+        console.log(email)
+      })
+    </script>
   </body>
 </html>
