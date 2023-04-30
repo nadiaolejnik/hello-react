@@ -1,5 +1,5 @@
 {
-  "name": "final-project",
+  "name": "hello-react",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -10,9 +10,6 @@
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
-  },
-  "devDependencies": {
-    "@supabase/supabase-js": "2.21.0"
   },
   "scripts": {
     "start": "react-scripts start",
